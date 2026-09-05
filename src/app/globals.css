@@ -66,8 +66,8 @@
 
 /* Dark mode: Feature strip and panels */
 [data-theme="dark"] .rounded-3xl,
-[data-theme="dark"] .rounded-\\[2rem\\],
-[data-theme="dark"] .rounded-\\[2\\.5rem\\] {
+[data-theme="dark"] [class*="rounded-[2rem]"],
+[data-theme="dark"] [class*="rounded-[2.5rem]"] {
   border-color: #2e2850;
 }
 

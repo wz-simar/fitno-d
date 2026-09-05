@@ -184,7 +184,9 @@ export default function Footer() {
               <p className="text-white/60 text-sm mt-2">Download the App</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="#"
+                  href="https://apps.apple.com/bz/app/fitno-d/id6775784318"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white rounded-xl px-4 py-2.5 transition-colors duration-200 text-sm"
                 >
                   <svg
@@ -198,7 +200,9 @@ export default function Footer() {
                   App Store
                 </a>
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.wellnessz.fitno&hl=en_IN"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white rounded-xl px-4 py-2.5 transition-colors duration-200 text-sm"
                 >
                   <svg

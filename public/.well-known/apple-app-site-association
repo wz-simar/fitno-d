@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["YB5RW5JH8M.com.wellnessz.fitno"],
+        "paths": ["/app/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["YB5RW5JH8M.com.wellnessz.fitno"]
+  }
+}

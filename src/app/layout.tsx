@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      {/* Prevent flash of wrong theme */}
+    <html lang="en" className="h-full antialiased" data-theme="light" suppressHydrationWarning>
+      {/* Prevent flash of wrong theme — suppressHydrationWarning: script may set dark before hydrate */}
       <head>
         <script
           dangerouslySetInnerHTML={{

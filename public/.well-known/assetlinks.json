@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wellnessz.fitno",
+      "sha256_cert_fingerprints": [
+        "AB:16:3C:ED:59:52:E5:7B:7A:49:95:92:11:6B:D8:F2:AE:3E:5B:22:BC:76:DC:A6:E2:8F:47:4E:B6:9A:3E:39"
+      ]
+    }
+  }
+]
