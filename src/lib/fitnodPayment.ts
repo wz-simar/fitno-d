@@ -104,17 +104,15 @@ export async function openFitnodCheckout(params: {
   await loadRazorpayScript();
 
   return new Promise((resolve, reject) => {
-    const RazorpayCtor = (
-      window as Window & {
-        Razorpay: new (options: Record<string, unknown>) => {
-          open: () => void;
-          on: (
-            event: string,
-            cb: (response: { error: { description?: string } }) => void
-          ) => void;
-        };
-      }
-    ).Razorpay;
+    type RazorpayInstance = {
+      open: () => void;
+      on: (
+        event: string,
+        cb: (response: { error: { description?: string } }) => void
+      ) => void;
+    };
+    type RazorpayCtor = new (options: Record<string, unknown>) => RazorpayInstance;
+    const RazorpayCtor = (window as unknown as { Razorpay: RazorpayCtor }).Razorpay;
 
     const rzp = new RazorpayCtor({
       key: params.keyId,

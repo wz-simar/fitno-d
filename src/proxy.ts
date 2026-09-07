@@ -7,7 +7,7 @@ const APP_STORE_URL = 'https://apps.apple.com/bz/app/fitno-d/id6775784318';
 const IOS_REGEX = /iPhone|iPad|iPod/i;
 const ANDROID_REGEX = /Android/i;
 
-export function middleware(request: Request) {
+export function proxy(request: Request) {
   const { pathname } = new URL(request.url);
   if (!pathname.startsWith('/app')) {
     return NextResponse.next();
