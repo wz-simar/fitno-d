@@ -95,7 +95,7 @@ export default function Hero() {
       {/* CTA Buttons */}
       <div ref={statsRef} className="reveal relative z-10 mt-10 flex flex-col items-center">
         <a
-          href="/app"
+          href="#pricing"
           className="inline-flex items-center justify-center px-12 py-4 text-base font-bold font-outfit uppercase tracking-widest text-white rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-[0_8px_30px_rgba(123,45,255,0.25)] hover:shadow-[0_12px_35px_rgba(123,45,255,0.4)]"
           style={{
             backgroundColor: '#7B2DFF',

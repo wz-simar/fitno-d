@@ -227,14 +227,14 @@ export default function Footer() {
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="/privacy-policy"
               className="text-white/40 text-sm hover:text-white/60 transition-colors duration-200"
             >
               Privacy Policy
             </a>
             <span className="text-white/20">|</span>
             <a
-              href="#"
+              href="/terms-and-conditions"
               className="text-white/40 text-sm hover:text-white/60 transition-colors duration-200"
             >
               Terms of Service

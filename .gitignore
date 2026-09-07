@@ -32,6 +32,11 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# secrets — never commit Razorpay credentials
+public/rzp-key.csv
+**/rzp-key.csv
 
 # vercel
 .vercel
