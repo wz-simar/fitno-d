@@ -186,7 +186,7 @@ export default function Subscription() {
             </button>
 
             <p className="text-center text-sm mt-4" style={{ color: 'var(--color-text-muted)' }}>
-              Secure payment • Instant Client ID
+              Secure payment • Login with mobile number
             </p>
           </div>
         </div>
@@ -213,12 +213,14 @@ export default function Subscription() {
                 <h3 className="font-outfit font-extrabold text-2xl mb-2" style={{ color: 'var(--color-text)' }}>
                   {success.alreadyRegistered ? 'You already have access' : 'Welcome to FitNoD!'}
                 </h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--color-text-muted)' }}>
-                  Your Client ID (use this to log in to the app):
+                <p className="text-sm mb-2" style={{ color: 'var(--color-text-muted)' }}>
+                  Open the FitNoD app and log in with your mobile number.
                 </p>
-                <p className="font-outfit font-extrabold text-3xl tracking-wide mb-2" style={{ color: 'var(--color-primary)' }}>
-                  {success.clientId}
-                </p>
+                {form.phone && (
+                  <p className="font-outfit font-extrabold text-2xl tracking-wide mb-2" style={{ color: 'var(--color-primary)' }}>
+                    {form.phone}
+                  </p>
+                )}
                 {(success.inviteCode || success.coachId) && (
                   <p className="text-sm mb-2" style={{ color: 'var(--color-text-muted)' }}>
                     Invite code:{' '}
@@ -234,18 +236,9 @@ export default function Subscription() {
                 )}
                 {!success.membership?.endDate && <div className="mb-6" />}
                 <div className="flex flex-col gap-3">
-                  {success.loginLink && (
-                    <a
-                      href={success.loginLink}
-                      className="btn-primary btn-shimmer w-full py-3 text-center"
-                    >
-                      Open FitNoD App Login
-                    </a>
-                  )}
                   <a
-                    href={success.loginLink || '/app'}
-                    className="w-full py-3 text-center rounded-xl border font-semibold"
-                    style={{ borderColor: 'var(--color-border)', color: 'var(--color-text)' }}
+                    href="/app"
+                    className="btn-primary btn-shimmer w-full py-3 text-center"
                   >
                     Download / Open App
                   </a>
@@ -257,7 +250,7 @@ export default function Subscription() {
                   Join FitNoD
                 </h3>
                 <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
-                  Enter your details, pay ₹{amount}, and get your Client ID instantly.
+                  Enter your details, pay ₹{amount}, then log in to the app with your mobile number.
                 </p>
 
                 {errorMsg && (
